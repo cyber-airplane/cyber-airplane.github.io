@@ -1,0 +1,42 @@
+.aircraft-section {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space-gutter) * 1.5);
+}
+
+.aircraft-section__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-gutter);
+}
+
+.aircraft-section__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+.aircraft-section__divider {
+  flex: 1;
+  border-top: 1px dashed var(--color-outline-variant);
+}
+
+.aircraft-section__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-gutter);
+}
+
+@media (min-width: 640px) {
+  .aircraft-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .aircraft-section__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,14 @@
+.main-content {
+  max-width: var(--space-container-max);
+  margin: 0 auto;
+  padding: 48px var(--space-margin-mobile) 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding: 48px var(--space-margin-desktop) 80px;
+  }
+}
