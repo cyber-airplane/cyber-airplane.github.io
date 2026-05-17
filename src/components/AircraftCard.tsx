@@ -3,6 +3,7 @@ import './AircraftCard.css'
 interface AircraftCardProps {
   image: string
   imageAlt: string
+  description: string
   model: string
   country: string
   type: string
@@ -12,6 +13,7 @@ interface AircraftCardProps {
 export default function AircraftCard({
   image,
   imageAlt,
+  description,
   model,
   country,
   type,
@@ -29,17 +31,13 @@ export default function AircraftCard({
       </div>
       <div className="aircraft-card__info">
         <div className="aircraft-card__row">
-          <span className="aircraft-card__label">型号:</span>
-          <span className="aircraft-card__value aircraft-card__value--accent">{model}</span>
+          <div className="aircraft-card__meta">
+            <span className="aircraft-card__value aircraft-card__value--accent">{model}</span>
+            <span className="aircraft-card__value">{country}</span>
+          </div>
+          <span className="aircraft-card__type">{type}</span>
         </div>
-        <div className="aircraft-card__row">
-          <span className="aircraft-card__label">国家:</span>
-          <span className="aircraft-card__value">{country}</span>
-        </div>
-        <div className="aircraft-card__row">
-          <span className="aircraft-card__label">类型:</span>
-          <span className="aircraft-card__value">{type}</span>
-        </div>
+        <p className="aircraft-card__description">{description}</p>
       </div>
       <button
         type="button"

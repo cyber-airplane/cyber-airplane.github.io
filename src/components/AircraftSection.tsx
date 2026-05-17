@@ -1,5 +1,5 @@
 import AircraftCard from './AircraftCard'
-import { AIRCRAFT_DATA } from '../data/aircraftData'
+import { AIRCRAFT_DATA } from '../data/indexCard'
 import './AircraftSection.css'
 
 export default function AircraftSection() {
@@ -15,6 +15,7 @@ export default function AircraftSection() {
             key={aircraft.model}
             image={aircraft.image}
             imageAlt={aircraft.imageAlt}
+            description={aircraft.imageAlt}
             model={aircraft.model}
             country={aircraft.country}
             type={aircraft.type}
