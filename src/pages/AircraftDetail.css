@@ -117,6 +117,7 @@
 .aircraft-detail__hero-wrapper {
   max-width: 1778px;
   width: 100%;
+  aspect-ratio: 1920 / 792;
 }
 
 .aircraft-detail__hero-placeholder {
