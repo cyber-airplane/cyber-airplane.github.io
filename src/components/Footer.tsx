@@ -1,9 +1,9 @@
 import './Footer.css'
 
 const FOOTER_LINKS = [
-  { label: '[状态_01: 正常]', href: '#' },
-  { label: '[版本_2.0.4]', href: '#' },
-  { label: '[安全_已加密]', href: '#' },
+  { label: '[已收录机型: 4]', href: '#' },
+  { label: '[图片：5]', href: '#' },
+  { label: '[版本：0.2]', href: '#' },
 ]
 
 const RUNTIME = '1,492:02:11'
@@ -13,7 +13,6 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__inner">
         <div className="footer__left">
-          <span className="footer__status">[系统_就绪]</span>
           <div className="footer__links">
             {FOOTER_LINKS.map((link) => (
               <a key={link.label} href={link.href} className="footer__link">

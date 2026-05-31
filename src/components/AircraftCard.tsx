@@ -4,7 +4,7 @@ interface AircraftCardProps {
   image: string
   imageAlt: string
   description: string
-  model: string
+  name: string
   country: string
   type: string
   onViewDetail?: () => void
@@ -14,13 +14,23 @@ export default function AircraftCard({
   image,
   imageAlt,
   description,
-  model,
+  name,
   country,
   type,
   onViewDetail,
 }: AircraftCardProps) {
+  const handleClick = () => {
+    onViewDetail?.()
+  }
+
   return (
-    <article className="aircraft-card">
+    <article
+      className="aircraft-card"
+      onClick={handleClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && handleClick()}
+    >
       <div className="aircraft-card__image-wrapper">
         <img
           src={image}
@@ -32,7 +42,7 @@ export default function AircraftCard({
       <div className="aircraft-card__info">
         <div className="aircraft-card__row">
           <div className="aircraft-card__meta">
-            <span className="aircraft-card__value aircraft-card__value--accent">{model}</span>
+            <span className="aircraft-card__value aircraft-card__value--accent">{name}</span>
             <span className="aircraft-card__value">{country}</span>
           </div>
           <span className="aircraft-card__type">{type}</span>
@@ -42,7 +52,6 @@ export default function AircraftCard({
       <button
         type="button"
         className="aircraft-card__button"
-        onClick={onViewDetail}
       >
         查看详情
       </button>

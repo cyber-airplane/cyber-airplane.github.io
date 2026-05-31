@@ -1,0 +1,277 @@
+.aircraft-detail {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 58px;
+}
+
+.aircraft-detail__main {
+  flex: 1;
+  padding: 0;
+}
+
+.aircraft-detail__loading,
+.aircraft-detail__error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: var(--space-gutter);
+}
+
+.aircraft-detail__terminal {
+  max-width: var(--space-container-max);
+  width: 70%;
+  min-width: 454px;
+  margin: -70px auto 80px;
+  padding: 0px;
+}
+
+.aircraft-detail__title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--color-surface-container);
+  border-bottom: 1px solid var(--color-panel-border);
+}
+
+.aircraft-detail__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--space-grid-unit);
+}
+
+.aircraft-detail__model {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-primary-container);
+  margin: 0 0 var(--space-grid-unit) 0;
+}
+
+.aircraft-detail__badges {
+  display: flex;
+  gap: var(--space-grid-unit);
+}
+
+.aircraft-detail__badge {
+  padding: 2px 8px;
+  background-color: var(--color-surface-container);
+  border: 1px solid var(--color-outline-variant);
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+}
+
+.aircraft-detail__title-bar-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-panel-active);
+}
+
+.aircraft-detail__title-bar-dots {
+  display: flex;
+  gap: var(--space-grid-unit);
+}
+
+.aircraft-detail__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-surface-tint);
+  opacity: 0.3;
+}
+
+.aircraft-detail__dot--active {
+  opacity: 1;
+  box-shadow: 0 0 4px var(--color-panel-active);
+}
+
+.aircraft-detail__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-gutter);
+  padding: var(--space-gutter) 0;
+}
+
+@media (max-width: 900px) {
+  .aircraft-detail__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aircraft-detail__hero-section {
+  display: flex;
+  justify-content: center;
+  margin: 0 calc(-1 * var(--space-margin-desktop));
+  margin-bottom: var(--space-gutter);
+}
+
+.aircraft-detail__hero-wrapper {
+  max-width: 1778px;
+  width: 100%;
+}
+
+.aircraft-detail__hero-placeholder {
+  width: 100%;
+  min-height: 144px;
+}
+
+.aircraft-detail__hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.aircraft-detail__info-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gutter);
+  height: 100%;
+}
+
+.aircraft-detail__specs-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary-container);
+  margin: 0 0 var(--space-grid-unit) 0;
+  padding-bottom: var(--space-grid-unit);
+  border-bottom: 1px solid var(--color-outline-variant);
+}
+
+.aircraft-detail__dimensions .aircraft-detail__specs-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0;
+  padding: 12px var(--space-gutter);
+  border-bottom: 1px solid var(--color-outline-variant);
+  flex-shrink: 0;
+}
+
+.aircraft-detail__specs-grid {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.aircraft-detail__spec-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-grid-unit);
+  background-color: var(--color-surface-container);
+  border: 1px solid var(--color-outline-variant);
+}
+
+.aircraft-detail__spec-label {
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+}
+
+.aircraft-detail__spec-value {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-on-surface);
+}
+
+.aircraft-detail__spec-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--space-grid-unit) var(--space-gutter);
+  flex: 1;
+  border-bottom: 1px solid var(--color-outline-variant);
+}
+
+.aircraft-detail__spec-row:last-child {
+  border-bottom: none;
+}
+
+.aircraft-detail__dimensions .aircraft-detail__spec-label {
+  font-size: 12px;
+  color: var(--color-on-surface-variant);
+  font-weight: 500;
+  width: 100px;
+}
+
+.aircraft-detail__dimensions .aircraft-detail__spec-value {
+  font-size: 12px;
+  color: var(--color-on-surface);
+  font-weight: 500;
+  margin-left: 16px;
+}
+
+.aircraft-detail__dimensions {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface-container);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: 0;
+  height: 100%;
+}
+
+.aircraft-detail__performance {
+  display: flex;
+  flex-direction: column;
+}
+
+.aircraft-detail__armament,
+.aircraft-detail__avionic {
+  display: flex;
+  flex-direction: column;
+}
+
+.aircraft-detail__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-grid-unit);
+}
+
+.aircraft-detail__list-item {
+  padding: var(--space-grid-unit);
+  background-color: var(--color-surface-container);
+  border: 1px solid var(--color-outline-variant);
+  font-size: 12px;
+  color: var(--color-on-surface);
+}
+
+.aircraft-detail__list-item::before {
+  content: '>';
+  color: var(--color-panel-active);
+  margin-right: var(--space-grid-unit);
+}
+
+.aircraft-detail__footer {
+  display: flex;
+  justify-content: flex-start;
+  padding: var(--space-gutter);
+  border-top: 1px solid var(--color-panel-border);
+  background-color: var(--color-surface-container);
+}
+
+.aircraft-detail__back-btn {
+  padding: var(--space-grid-unit) var(--space-gutter);
+  background-color: var(--color-surface-container-low);
+  border: 1px solid var(--color-panel-border);
+  color: var(--color-on-surface);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.aircraft-detail__back-btn:hover {
+  background-color: var(--color-surface-container);
+  border-color: var(--color-panel-active);
+  color: var(--color-panel-active);
+}

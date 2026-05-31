@@ -50,10 +50,11 @@
   --color-panel-border: #1f521f;
   --color-panel-active: #33ff00;
 
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-mono: 'JetBrains Mono', monospace, 'Menlo', 'SF Mono', 'Consolas', 'Courier New';
+  --font-sans: 'PingFang SC', 'HarmonyOS Sans SC', 'Alibaba PuHuiTi', 'Microsoft YaHei', sans-serif;
 
   --space-gutter: 16px;
-  --space-grid-unit: 8px;
+  --space-grid-unit: 6px;
   --space-margin-mobile: 16px;
   --space-margin-desktop: 32px;
   --space-container-max: 1440px;
@@ -135,18 +136,19 @@ img {
   height: 100%;
   background:
     linear-gradient(
-      rgba(18, 16, 16, 0) 50%,
-      rgba(0, 0, 0, 0.1) 50%
+      rgba(18, 16, 16, 0),
+      rgba(18, 16, 16, 0.1),
+      rgba(18, 16, 16, 0)
     ),
     linear-gradient(
       90deg,
-      rgba(255, 0, 0, 0.02),
-      rgba(0, 255, 0, 0.01),
-      rgba(0, 0, 255, 0.02)
+      rgba(255, 0, 0, 0.04),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.04)
     );
   background-size: 100% 3px, 3px 100%;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 99;
 }
 
 /* CRT glow effect */

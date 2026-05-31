@@ -12,16 +12,14 @@ export default function AircraftSection() {
       <div className="aircraft-section__grid">
         {AIRCRAFT_DATA.map((aircraft) => (
           <AircraftCard
-            key={aircraft.model}
+            key={aircraft.name}
             image={aircraft.image}
             imageAlt={aircraft.imageAlt}
             description={aircraft.imageAlt}
-            model={aircraft.model}
+            name={aircraft.name}
             country={aircraft.country}
             type={aircraft.type}
-            onViewDetail={() => {
-              console.log(`查看 ${aircraft.model} 详情`)
-            }}
+            onViewDetail={() => window.open(`/aircraft/${encodeURIComponent(aircraft.name)}`, '_blank')}
           />
         ))}
       </div>
